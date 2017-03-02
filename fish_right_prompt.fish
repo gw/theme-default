@@ -1,8 +1,8 @@
 function fish_right_prompt
   set -l cwd
 
-  set -l ahead    "↑"
-  set -l behind   "↓"
+  set -l ahead    "⬆"
+  set -l behind   "⬇"
   set -l diverged "⥄ "
   set -l dirty    "✘"
   set -l none     "✔"
@@ -31,9 +31,8 @@ function fish_right_prompt
 
     if git_is_touched
       echo -n -s $dirty
-    else
-      echo -n -s (git_ahead $ahead $behind $diverged $none)
     end
+      echo -n -s (git_ahead $ahead $behind $diverged $none)
   else
     echo -n -s $directory_color $cwd $normal_color
   end
