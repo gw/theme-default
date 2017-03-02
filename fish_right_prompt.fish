@@ -28,15 +28,17 @@ function fish_right_prompt
 
     echo -n -s $repository_color " " (git_branch_name) $normal_color " "
 
+    echo -n -s (git_ahead $ahead $behind $diverged)
+
     if git_is_touched
       echo -n -s $dirty
+      echo -n -s " "
     end
-      echo -n -s (git_ahead $ahead $behind $diverged $none)
+
   else
     echo -n -s $directory_color $cwd $normal_color
+    echo -n -s " "
   end
-
-  echo -n -s " "
 
   set_color $fish_color_autosuggestion ^/dev/null; or set_color 555
   date "+%H:%M"
