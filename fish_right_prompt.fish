@@ -5,7 +5,6 @@ function fish_right_prompt
   set -l behind   "⬇"
   set -l diverged "⥄ "
   set -l dirty    "✘"
-  set -l none     "✔"
 
   set -l directory_color  (set_color $fish_color_quote ^/dev/null; or set_color brown)
   set -l repository_color (set_color $fish_color_cwd ^/dev/null; or set_color green)
