@@ -10,7 +10,8 @@
 ## Install
 
 ```fish
-$ omf theme default
+$ omf install git@github.com:gw/theme-gwdefault.git
+$ omf theme gwdefault
 ```
 
 ## Features
